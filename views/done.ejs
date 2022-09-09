@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Warr-Checker</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/Style.css" />
+  <link rel="stylesheet" href="./css/mobile-style.css">
+  <link rel="stylesheet" href="./css/form.css">
+  
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <span class="logo-text">Warr-Checker</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/claim">Claim Warranty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout"> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+</header>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+p {
+  font-family: "Open Sans", sans-serif;
+}
+p {
+  font-size: 22px;
+}
+.landing-banner {
+  padding: 0 3%;
+}
+.banner-img {
+  height: 90vh;
+  width: auto;
+  margin-bottom: 20px;
+} 
+
+.landing-content-box {
+  max-width: 97%;
+}
+
+.landing-content-box h1 {
+  font-weight: 700;
+  font-size: 3.8rem;
+  text-align: right;
+}
+.landing-content-box p {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+</style>
+ <section class="landing-banner">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="banner-img-box">
+            <img src="../images/Booked.jpg" class="banner-img img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6 btn-group-vertical">
+          <div class="landing-content-box">
+            <h1>Sit Back and Relax!! We will Handle the Rest.</h1>
+            <p>You might have received your payment mail our team will now work on getting your Warranty Upto Date.
+            </p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+ <footer>
+            <div class="platform row">
+        <div class="col-md-6 col-sm-12 text-right">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="text text-left">
+              <h4 class="text-light">About us</h4>
+              <p class="text-light">We have Devloped this website for keeping record of all your electronic Devices</p>
+              <p class="pt-4 text-light">Copyright ©2019 All rights reserved | This template is made with by
+              <span> Amritansh Raunak Ujjwal</span>
+                </p>       
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="text text-left">
+                    <form action="/sign_up" method="POST" id="myForm">
+                    <div class="card bg-light">
+                        <div class="row mt-0">
+                            <div class="col-md-12 ">
+                                <h4 class="">Contact Us</h4>
+                                <p>Use the form below to share your questions, ideas, comments and feedback</p>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-12 mb-0">
+                                <p class="mb-1">Email</p>
+                                <input type="email" name="email" id="email" class="form-control input-box rm-border">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 mb-2">
+                                <p class="mb-1">Message</p> 
+                                <textarea type="text" name="message" id="message" class="form-control input-box rm-border"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center mb-0">
+                            <div class="col-md-12 px-3"> <input type="submit" value="Submit" class="btn btn-block btn-purple rm-border"> </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+      </div>
+  </footer>
+
+</body>
+</html>

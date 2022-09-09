@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/Style.css" />
+  <link rel="stylesheet" href="./css/mobile-style.css">
+  <link rel="stylesheet" href="./css/form.css">
+    <title>Table</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+   <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <span class="logo-text">Warr-Checker</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/claim">Extend Warranty</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+</header>
+ <section>
+ <div class="platform row">
+        <div class="col-md-6 col-sm-12 text-right">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="text text-left">
+             <div id="data">
+      <form class="form form-group" action="/send" method="POST" id="myForm">
+    <h3><b>Submit Details of Your Product</b></h3><br>
+        Name : <input type="text" class="name" id="Name" placeholder="Name of your product"><br><br>
+        Type : <input type="text" class="type" id="branch" placeholder="e.g Electronics"><br><br>
+        invoice Number: <input type="number" class="order-number" id="address" placeholder="Invoice Number"><br><br>
+        Contact Email : <input type="email" class="email" name="email" id="contact" placeholder="email"><br><br>
+        Expiry Date : <input type="text" class="submitdate" name="date" id="date-picker" placeholder="In mm-dd--yyyy format">
+        <button class="btn btn-outline-danger btn-lg" id="button" style="width: 200px; margin-top: 20px;" type= "submit" onclick="AddData(event) ">Add</button>
+                </form>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="text text-left">
+                    <div id="tab">
+            <table class="tabledata table " id="list" border="1"><thead>
+                <tr>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Order Number</td>
+                <td>Email</td>
+                <td>Expiring on</td>
+                </tr>
+                </thead>
+            <tbody></tbody>
+            </table>
+                </div>
+                  </div>
+            </div>
+        </div>
+
+      </div>
+</section>
+ <footer>
+            <div class="platform row">
+        <div class="col-md-6 col-sm-12 text-right">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="text text-left">
+              <h4 class="text-light">About us</h4>
+              <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum maxime ea similique illum corrupti</p>
+              <p class="pt-4 text-light">Copyright ©2019 All rights reserved | This template is made with by
+              <span> Amritansh Raunak Ujjwal</span>
+                </p>       
+              </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="text text-left">
+                  <form action="/sign_up" method="POST" id="myForm">
+                    <div class="card bg-light">
+                        <div class="row mt-0">
+                            <div class="col-md-12 ">
+                                <h4 class="">Contact Us</h4>
+                                <p>Use the form below to share your questions, ideas, comments and feedback</p>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-12 mb-0">
+                                <p class="mb-1">Email</p>
+                                <input type="email" name="email" id="email" class="form-control input-box rm-border">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 mb-2">
+                                <p class="mb-1">Message</p> 
+                                <textarea type="text" name="message" id="message" class="form-control input-box rm-border"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center mb-0">
+                            <div class="col-md-12 px-3"> <input type="submit" value="Submit" class="btn btn-block btn-purple rm-border"> </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+      </div>
+
+   
+  </footer>
+
+<script>
+
+function AddData(e)
+{
+e.preventDefault();
+var rows="";
+var name=document.getElementById("Name").value;
+var branch=document.getElementById("branch").value;
+var address=document.getElementById("address").value;
+var contact=document.getElementById("contact").value;
+var currentDate = document.getElementById("date-picker").value;
+var dateEntered = new Date(currentDate).getTime();
+
+var countDownDate = dateEntered;
+console.log(countDownDate);
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+    var display = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  console.log(display);
+    
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+   display = "EXPIRED";
+  }
+clearInterval(x);
+  rows+="<tr><td>"+name+"</td><td>"+branch+"</td><td>"+address+"</td><td>"+contact+"</td><td>"+display+"</td></tr>";
+$(rows).appendTo("#list tbody");
+    
+}, 1000);
+}
+</script>
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+  import {  getDatabase, ref, set  } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
+         
+  const firebaseConfig = {
+  apiKey: "AIzaSyDTjk-Qyd78my7PFF34Baz-K9_YW2azbxo",
+  authDomain: "warrantychecker-bfa0e.firebaseapp.com",
+  databaseURL: "https://warrantychecker-bfa0e-default-rtdb.firebaseio.com",
+  projectId: "warrantychecker-bfa0e",
+  storageBucket: "warrantychecker-bfa0e.appspot.com",
+  messagingSenderId: "599325949166",
+  appId: "1:599325949166:web:b5fcefba36d85b10e507ff",
+  measurementId: "G-4L5EP1TY1X"
+};
+const app = initializeApp(firebaseConfig);
+ const db = getDatabase(app);
+
+
+var button = document.getElementById("button").addEventListener("click" , function writeUserData( Name,branch, address, contact,currentDate) {
+
+var Name=document.getElementById("Name").value;
+var branch=document.getElementById("branch").value;
+var address=document.getElementById("address").value;
+var contact=document.getElementById("contact").value;
+var currentDate = document.getElementById("date-picker").value;  
+
+  set(ref(db, 'users/' + Name), {
+    
+    type:branch,
+    orderno:address,
+    email:contact,
+    date:currentDate
+    
+  });
+ 
+})
+
+
+    </script>
+</body>
+</html>
